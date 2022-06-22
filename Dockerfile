@@ -18,6 +18,7 @@ WORKDIR /app
 COPY --from=build /out/whois /app/whois
 COPY --from=build /src/config.toml /app/config.toml
 COPY --from=build /src/*_list /app/
+COPY --from=build /src/html /app/html
 
 RUN set -xe \
     && chmod +x /app/whois

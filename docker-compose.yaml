@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  whois:
+    container_name: whois
+    image: ghcr.io/apocalypsor/whois:latest
+    restart: always
+    volumes:
+      - ./config.toml:/onfig.toml
